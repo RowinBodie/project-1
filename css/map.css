@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+}
+#easy{
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 480px;
+    height: 480px;
+    display: grid;
+    grid-template-rows: inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit;
+    grid-template-columns: inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit;
+    background-color: lavender
+}
+#normal{
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 600px; 
+    height: 600px;
+    display: grid;
+    grid-template-rows: inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit;
+    grid-template-columns: inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit;
+    background-color: lavender
+}
+.circle{
+    grid-row: 16/17;
+    grid-column: 1/2;
+    display: inline;
+    background-color: maroon;
+    z-index: 1;
+    border-radius: 50%;
+}
+#sky{
+    grid-row: 1/18;
+    grid-column: 1/18;
+    display: inline;
+    background-color: lavender;
+}
+#none{
+    display: none;
+}
