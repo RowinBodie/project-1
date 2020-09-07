@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="css/images/layout.png" sizes="17x17">
     <link rel="stylesheet" href="css/map.css">
-    <title>Document</title>
+    <title>Be aMAZEd</title>
 </head>
 <body>
-    <div id = "map" tabindex="1" onkeypress="walking(event)"">
-        <div id="sky"></div>
-        <script src="js/java.js"></script>
-        <script src="js/level.js"></script>
+    <div id="maze">
+        <div id = "information">
+            <h1>Informatie:</h1>
+            <p>je kan bewegen met gebruik van W,A,S en D.</p>
+            <p>je moet eerst het doolhof selecteren voor gebruik.</p>
+            <button onclick="restart()">restart</button>
+        </div>
+        <div id = "map" tabindex="1" onkeypress="walking(event)">
+            <div id="sky"></div>
+            <script src="js/maze.js"></script>
+            <script src="js/level.js"></script>
+            <script src="js/visual.js"></script>
+            <script src="js/stats.js"></script>
+            <script src="js/combat.js"></script>
+        </div>
+    </div>
+    <div id="combatField">
+        <button onclick="restart()">u died!</button>
     </div>
 </body>
 </html>

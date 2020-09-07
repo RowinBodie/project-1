@@ -1,25 +1,29 @@
 *{
     margin: 0;
+    background-color: lightcoral;
 }
 #easy{
     margin: 0 auto;
-    margin-top: 200px;
-    width: 480px;
-    height: 480px;
+    margin-top: 5%;
+    width: 35rem; 
+    height: 35rem;
     display: grid;
     grid-template-rows: inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit;
     grid-template-columns: inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit;
-    background-color: lavender
+    background-color: rgb(101, 101, 107);
 }
 #normal{
     margin: 0 auto;
-    margin-top: 200px;
-    width: 600px; 
-    height: 600px;
+    margin-top: 5%;
+    width: 35rem; 
+    height: 35rem;
     display: grid;
     grid-template-rows: inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit;
     grid-template-columns: inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit inherit;
-    background-color: lavender
+    background-color: rgb(101, 101, 107);
+}
+.background{
+    background-color: rgb(101, 101, 107);
 }
 .circle{
     grid-row: 16/17;
@@ -33,8 +37,22 @@
     grid-row: 1/18;
     grid-column: 1/18;
     display: inline;
-    background-color: lavender;
+    background-color: rgb(101, 101, 107);
 }
 #none{
+    display: none;
+}
+#information{
+    position: absolute;
+    left: 18rem;
+    top: 4.5rem;
+    width: 200px;
+    height: 60px;
+}
+button{
+    background-color: rgb(189, 58, 58);
+}
+
+#combatField{
     display: none;
 }
