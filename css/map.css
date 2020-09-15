@@ -1,6 +1,9 @@
-*{
+body{
     margin: 0;
     background-color: lightcoral;
+}
+#maze{
+    display: inline;
 }
 #easy{
     margin: 0 auto;
@@ -54,5 +57,65 @@ button{
 }
 
 #combatField{
+    padding: 5%;
     display: none;
+    margin: 0 auto;
+    width: 800px;
+}
+#field{
+    position: relative;
+    padding: 10px 0 10px 0;
+    margin: 0 auto;
+    display: block;
+    width: 700px;
+    height: 500px;
+    background-image: url("images/combatField.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#p,#u{
+    width: 150px;
+    height: 150px;
+}
+#p{
+    position: absolute;
+    right: 8%;
+    top: 40%;
+    
+}
+#u{
+    position: absolute;
+    left: 8%;
+    top: 60%;
+}
+ul{
+    list-style: none;
+    white-space: nowrap;
+    list-style-type: none;
+    border: black 1px solid;
+    height: 24px;
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    padding-right: 2px;
+    background-color: grey;
+}
+li{
+    background-color: lime;
+    width: 5px;
+    margin: 0;
+    margin-top: 3px;
+    height: 17px;
+    display: inline-block;
+}
+p{
+    padding-left: 15px;
+    padding-right: 5px;
+    margin: 0;
+    display: inline;
+    padding-bottom: 2px;
+}
+#enemyhp{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }

@@ -38,9 +38,9 @@ function size(){
     else if(value == "normal"){
         nextNormalLevel();
     }
-    else if(value == "hard"){
-        nextHardLevel();
-    }
+    // else if(value == "hard"){
+    //     nextHardLevel();
+    // }
 }
 
 var cube = 0;
@@ -91,6 +91,7 @@ function make(size){
     holdCircle.className = "circle";
 }
 
+//movement
 function walking(e){
     str = e.which;
     if(str == 115){
@@ -112,8 +113,8 @@ function walking(e){
                 point += 1
                 place(point,oldPoint);
                 oldPoint +=1;
-                showCombat("block");
-                noMaze("none");
+                showCombat(true);
+                selection();
             }
             else if(check(spot,1,"min") != "pink" && check(spot,1,"min") != "yellow" &&check(spot,1,"min") != "purple"){
                 point += 1
@@ -145,8 +146,8 @@ function walking(e){
                 point += leftRight;
                 place(point,oldPoint);
                 oldPoint +=leftRight;
-                showCombat("block");
-                noMaze("none");
+                showCombat(true);
+                selection();
             }
             else if(check(spot,leftRight,"min") != "pink" && check(spot,leftRight,"min") != "yellow" && check(spot,leftRight,"min") != "purple"){
                 point += leftRight;
@@ -179,8 +180,8 @@ function walking(e){
                 point -= leftRight
                 place(point,oldPoint);
                 oldPoint -=leftRight;
-                showCombat("block");
-                noMaze("none");
+                showCombat(true);
+                selection();
             }
             else if(check(spot,leftRight,"plus") != "pink" && check(spot,leftRight,"plus") != "yellow" && check(spot,leftRight,"plus") != "purple"){
                 point -= leftRight
@@ -213,8 +214,8 @@ function walking(e){
                 point -=1;
                 place(point,oldPoint);
                 oldPoint -=1;
-                showCombat("block");
-                noMaze("none");
+                showCombat(true);
+                selection();
             }
             else if(check(spot,1,"plus") != "pink" && check(spot,1,"plus") != "yellow" && check(spot,1,"plus") != "purple"){
                 point -=1;
@@ -228,12 +229,14 @@ function walking(e){
         }
     }
 }
+//circle placement
 function place(num1,num2){
     holdOldCircle = document.getElementById("pixel"+num2);
     holdOldCircle.className = "background";
     holdCircle = document.getElementById("pixel"+num1);
     holdCircle.className = "circle";
 }
+//tile checker
 function check(step,nummer,tel){
     colorItem = document.getElementById("pixel"+step);
     if(colorItem.style.backgroundColor == "yellow"){
@@ -260,6 +263,7 @@ function check(step,nummer,tel){
     }
     
 }
+//reset
 function victory(){
     if(value == "easy"){
         reset(288);
@@ -286,6 +290,8 @@ function victory(){
     //     nextHardLevel();
     // }
 }
+
+//if game won
 function winGame(){
     noGame = document.getElementById(value);
     noGame.id = "none";
@@ -293,6 +299,7 @@ function winGame(){
     location.reload();
 }
 
+//restart
 function restart(){
     noGame = document.getElementById(value);
     noGame.id = "none";
@@ -300,6 +307,7 @@ function restart(){
     location.reload();
 }
 
+//door unlock
 function unlockDoor(){
     key = true;
     if(value == "easy"){

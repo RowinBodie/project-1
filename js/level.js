@@ -6,27 +6,14 @@ function colorBlock(block, color){
     if(color == null){
         colorItem.style.backgroundColor = "black";
     }
-    else if(color == "yellow"){
-        colorItem.style.backgroundColor = "yellow";
-    }
-    else if(color == "green"){
-        colorItem.style.backgroundColor = "green";
-    }
-    else if(color == "blue"){
-        colorItem.style.backgroundColor = "blue";
-    }
-    else if(color == "pink"){
-        colorItem.style.backgroundColor = "pink";
-    }
-    else if(color == "purple"){
-        colorItem.style.backgroundColor = "purple";
+    else{
+        colorItem.style.backgroundColor = color;
     }
 }
 
 function nextEasyLevel(){
     played +=1
     if(played == 1){
-        
         field1();
     }
     else if(played == 2){
@@ -58,6 +45,7 @@ function field1(){
     for(i=0;i<=14;i++){
         colorBlock(i);
     }
+    colorBlock(64,"purple")
     colorBlock(15);
     colorBlock(16);
     colorBlock(256,"pink");

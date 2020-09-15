@@ -25,3 +25,10 @@ function levelup(){
     }
     console.log(levelArray);
 };
+
+var maxExp = 10;
+
+function xp(earned){
+    earn = Math.floor(Math.random() * 4 + earned);
+    console.log(earn)
+};
