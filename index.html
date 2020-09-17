@@ -11,7 +11,9 @@
     <div id="maze">
         <div id = "information">
             <h1>Informatie:</h1>
-            <p>je kan bewegen met gebruik van W,A,S en D.</p>
+            <p>je kan bewegen met gebruik van W,A,S,D.<br></p>
+            <p>het dolhof zit vol met vallen gevechten en puzzels. WIP</p>
+            <p>een groen vakje is een key en een geel vakje is een locked door.</p>
             <p>je moet eerst het doolhof selecteren voor gebruik.</p>
             <button onclick="restart()">restart</button>
         </div>
@@ -28,9 +30,8 @@
         <div id="field">
             <div id="enemy">
                 <img id="p" src="css/images/Capri-Sun_Orange_200ml_with-background-and-splashes_large-picture.png">
-                <ul id="enemuHp">
+                <ul id="enemyHp">
                     <p>hp/</p>
-                    <li>hi</li>
                 </ul>
             </div>
             <div id="you">
@@ -39,8 +40,14 @@
                     <p>hp/</p>
                 </ul>
             </div>
+            <div id="menu">
+                <button id="attack" onclick="moveFirst('attack','u')">Attack</button>
+                <button id="block" onclick="moveFirst('block','u')">Block</button>
+                <button id="recover" onclick="moveFirst('recover','u')">Recover</button>
+                <button id="dodge" onclick="moveFirst('dodge','u')">Dodge</button>
+            </div>
         </div>
-        <button onclick="showCombat()">go back</button>
+        <!-- <button onclick="showCombat()">go back</button> -->
     </div>
 </body>
 </html>

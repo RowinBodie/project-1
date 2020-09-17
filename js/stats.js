@@ -20,7 +20,7 @@ function levelup(){
         else{
             temCount = Math.floor(Math.random() * 2+1);
         }
-        levelArray.push(temCount)
+        levelArray.push(temCount);
         statArray[i] += temCount;
     }
     console.log(levelArray);
@@ -30,5 +30,5 @@ var maxExp = 10;
 
 function xp(earned){
     earn = Math.floor(Math.random() * 4 + earned);
-    console.log(earn)
+    console.log(earn);
 };

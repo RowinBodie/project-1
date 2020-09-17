@@ -110,11 +110,11 @@ function walking(e){
                 alert("Next Level!");
             }
             else if(check(spot,1,"min") == "purple"){
+                showCombat(true);
+                selection();
                 point += 1
                 place(point,oldPoint);
                 oldPoint +=1;
-                showCombat(true);
-                selection();
             }
             else if(check(spot,1,"min") != "pink" && check(spot,1,"min") != "yellow" &&check(spot,1,"min") != "purple"){
                 point += 1
@@ -222,7 +222,6 @@ function walking(e){
                 place(point,oldPoint);
                 oldPoint -=1;
             }
-            
         }
         if(point == winNum  && key == true){
             victory();
@@ -261,7 +260,6 @@ function check(step,nummer,tel){
         }
         return false
     }
-    
 }
 //reset
 function victory(){

@@ -52,7 +52,7 @@ body{
     width: 200px;
     height: 60px;
 }
-button{
+#information>button{
     background-color: rgb(189, 58, 58);
 }
 
@@ -73,6 +73,16 @@ button{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+#hp{
+    position: absolute;
+    left: 35%;
+    top: 70%;
+}
+#enemyHp{
+    position: absolute;
+    left: 40%;
+    top: 45%;
+}
 #p,#u{
     width: 150px;
     height: 150px;
@@ -81,7 +91,7 @@ button{
     position: absolute;
     right: 8%;
     top: 40%;
-    
+    padding: 0;
 }
 #u{
     position: absolute;
@@ -108,14 +118,32 @@ li{
     height: 17px;
     display: inline-block;
 }
-p{
+#enemyHp>p,#hp>p{
     padding-left: 15px;
     padding-right: 5px;
     margin: 0;
     display: inline;
     padding-bottom: 2px;
 }
-#enemyhp{
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+#menu{
+    padding: 5px;
+    margin-top: 515px;
+    background-color: grey;
+    border: black 1px solid;
+}
+#menu>button{
+    width: 168px;
+    height: 50px;
+}
+#attack{
+    background-color: rgb(189, 58, 58);
+}
+#block{
+    background-color: royalblue;
+}
+#recover{
+    background-color: springgreen;
+}
+#dodge{
+    background-color: wheat;
 }
